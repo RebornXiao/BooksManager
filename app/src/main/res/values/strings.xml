@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BooksManager</string>
+    <string name="menu_select_all">全选</string>
+    <string name="menu_reset_list">重置</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_discard">删除</string>
+
+</resources>

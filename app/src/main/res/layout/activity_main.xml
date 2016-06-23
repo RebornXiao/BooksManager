@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_add_all"
+        android:layout_width="match_parent"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/et_add_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="列表向左滑动可以删除空类别"/>
+
+        <TextView
+
+            android:id="@+id/tv_add_ok"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_backgroud_blue"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_add_all"
+        android:focusableInTouchMode="true"
+        >
+
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+
+</RelativeLayout>

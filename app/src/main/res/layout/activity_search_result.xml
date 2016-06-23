@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_search_all"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/tv_begin_search"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="搜索" />
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_toLeftOf="@+id/tv_begin_search"
+                android:queryHint="请输入您要查找的ISBN"
+                android:tag="@string/app_name"></android.support.v7.widget.SearchView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/main_tab_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_book_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_search_all"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:id="@+id/rl_book_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+                    android:id="@+id/iv_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/icon" />
+
+                <LinearLayout
+                    android:id="@+id/ll_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_book_detail"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_book_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="书名"
+                        android:textColor="@color/black"
+
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_chubanshe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="出版社"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_fenlei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="分类"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_isbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="ISBN"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_zuozhe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="作者"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_fanyi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="翻译"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="出版时间"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="价格"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/main_tab_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_book_minddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_book_top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_book_biaoqian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_biaoqian_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/tv_book_biaoqian"
+                    android:text="好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_pingfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_book_biaoqian_detail"
+                    android:text="评分:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_pingfen_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_book_biaoqian_detail"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/tv_book_pingfen"
+                    android:text="共110人评分，平均分 10.0/10分"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rl_book_minddle"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_tab_gray" />
+
+            <TextView
+                android:id="@+id/tv_book_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_book_minddle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="简介" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_find_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_search_all"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="对不起，没有搜索到你所要查找的书籍" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_add_db"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rl_book_result"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_backgroud_blue"
+            android:gravity="center"
+            android:text="存入数据库"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+</ScrollView>

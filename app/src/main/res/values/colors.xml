@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="point_blue_color">#c8deff</color>
+    <color name="call_color">#1f9eeb</color>
+    <color name="register_click">#005be2</color>
+    <color name="register_un">#0172ff</color>
+    <color name="main_tab_gray">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#101010</color>
+
+</resources>

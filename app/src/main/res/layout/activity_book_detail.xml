@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_book_detail_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/sv_book_detail_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_book_choose_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_book_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/iv_book_detail"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon" />
+
+                <LinearLayout
+                    android:id="@+id/ll_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_book_detail"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_book_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="书名"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_chubanshe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="出版社"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_fenlei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="分类"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_isbn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="ISBN"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_zuozhe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="作者"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="出版时间"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_book_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="价格"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/main_tab_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_book_minddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_book_top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_book_biaoqian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_biaoqian_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/tv_book_biaoqian"
+                    android:text="好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本，好书一本"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_pingfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_book_biaoqian_detail"
+                    android:text="评分:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_book_pingfen_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_book_biaoqian_detail"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/tv_book_pingfen"
+                    android:text="共110人评分，平均分 10.0/10分"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rl_book_minddle"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_tab_gray" />
+
+            <TextView
+                android:id="@+id/tv_book_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_book_minddle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="简介" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
