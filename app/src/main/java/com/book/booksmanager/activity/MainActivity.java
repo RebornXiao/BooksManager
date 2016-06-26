@@ -125,17 +125,12 @@ public class MainActivity extends BaseActivity {
                             @Override
                             public void onData(final String result) {
                                 MLog.e("result:" + result);
-                                uiHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
                                         dismissTipsDialogs();
                                         Bundle bundle = new Bundle();
                                         bundle.putString("title", app.getCategoryInfos().get(position).getTitle());
                                         bundle.putString("bookdata", result);
                                         bundle.putBoolean("isHaveBook", false);
                                         activityUtil.jumpTo(BookListActivity.class, bundle);
-                                    }
-                                });
                             }
                         });
                     } else {
